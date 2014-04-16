@@ -1,0 +1,67 @@
+=============================
+Structure of project:
+
+org.ecs.ecsbeekeeping
+-bee		Contains all the Bee classes, including the abstract Bee.
+-event		Contains the events which the simulation creates
+-event/bee	Contains all the Bee events
+-event/flower	Contains all the Flower events
+-event/hive	Contains all the Hive events
+-flower		Contains all the Flower classes, including the abstract Flower.
+-hive		Contains all the Hive classes.
+-io		Contains the Garden file loader
+
+Garden.java	Represents the Garden (with the flowers and hive) 
+Main.java	Main class which launches the simulator
+Simulator.java	Sets a periodic tick to call anotherDay()
+
+
+
+=============================
+Attempted parts:
+
+Part 1
+- Created all the Bee classes (in the bee package)
+- Defined properties/behavior according to Table 1.
+
+Part 2
+- Created the Hive class with the appropriate methods
+
+Part 3
+- Implemented Queens behavior (lays an egg every three days)
+
+Part 4
+- Implemented the evolving Bees
+- Created a Simulation class which calls anotherDay every 500ms
+
+Part 5
+- Created a garden, plus all the flower classes (in the flower package)
+- Implemented the growing functionality
+
+Part 6
+- Created io/GardenLoader to handle the loading of the configuration file
+
+Part 7 (Typo in spec says Part 6)
+- Implemented the Worker behavior of getting flowers from the garden
+
+
+
+
+=============================
+Extensions:
+
+- Every 50 days of the simulation, the simulator saves to the config file "savedConfig". See Simulator#saveGarden()
+
+- If two parameters are given to the program, the second will be the path to a log file. All the output from the simulation is appended to this file
+
+
+
+=============================
+Command line parameters
+
+If in the root director with the org dir, the parameters are as follows:
+
+Syntax: java org/ecs/ecsbeekeeping/Main configfile
+Syntax: java org/ecs/ecsbeekeeping/Main configfile logfile
+
+
